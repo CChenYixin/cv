@@ -32,10 +32,12 @@ header {
 
 .menu::after {
     margin-top: 10px;
+    -webkit-transition: width .4s ease-in;
     transition: width .4s ease-in;
 }
 
 .menu span {
+    -webkit-transition: width .4s ease-in;
     transition: width .4s ease-in;
 }
 
