@@ -1,3 +1,16 @@
+/*网页背景渐变*/
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-image: -webkit-linear-gradient(bottom, #dfe9f3 0%, white 100%);
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+
 /*网页头部和菜单栏*/
 
 header {
@@ -120,6 +133,7 @@ main {
 .img-content-01 {
     max-width: 100%;
     height: auto;
+    border-radius: 5px 0 0 5px;
 }
 
 
@@ -172,7 +186,7 @@ main {
 .bg {
     display: block;
     max-width: 100%;
-    opacity: .7;
+    opacity: .5;
     -webkit-transition: all 0.6s;
     transition: all 0.6s;
 }
@@ -187,7 +201,6 @@ main {
     display: block;
     position: absolute;
     max-width: 100%;
-    opacity: .8;
 }
 
 
