@@ -1,9 +1,8 @@
+/*网页头部和菜单栏*/
+
 header {
     position: relative;
 }
-
-
-/*菜单栏*/
 
 .menu {
     position: absolute;
@@ -53,4 +52,193 @@ header {
 .menu:hover::after {
     width: 20px;
     background-color: #cb1b45;
+}
+
+
+/*网页主体*/
+
+
+/*网页主体的介绍部分*/
+
+main {
+    padding-top: 100px;
+}
+
+.intro-content {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 0 0 auto;
+}
+
+.intro-content::after {
+    content: "";
+    display: block;
+    height: 0px;
+    clear: both;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.text-content {
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 60px;
+}
+
+.title-content {
+    font-size: 23px;
+    font-weight: 500;
+    font-family: NSimSun;
+    color: #000;
+    margin-bottom: 80px;
+}
+
+.small-font {
+    display: block;
+    color: #999;
+    font-family: FangSong;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.contact-content {
+    font-size: 16px;
+    font-family: FangSong;
+    font-weight: normal;
+    line-height: 15px;
+    color: #000;
+}
+
+.img-content {
+    float: right;
+    box-sizing: border-box;
+    text-align: right;
+    width: 25%;
+}
+
+.img-content-01 {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*网页主体的主要部分*/
+
+.main-content {
+    margin-top: 80px;
+    height: 250px;
+    width: 100%;
+}
+
+.main-content::after {
+    content: "";
+    display: block;
+    height: 0px;
+    clear: both;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.list {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list::after {
+    content: "";
+    display: block;
+    height: 0px;
+    clear: both;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.li-list {
+    float: left;
+    width: 20%;
+    overflow: hidden;
+    height: 250px;
+}
+
+.list-href {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.bg {
+    display: block;
+    max-width: 100%;
+    opacity: .7;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+}
+
+.bg:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.ft {
+    display: block;
+    position: absolute;
+    max-width: 100%;
+    opacity: .8;
+}
+
+
+/*网页底部*/
+
+footer {
+    margin-top: 15px;
+    width: 100%;
+}
+
+footer::after {
+    content: "";
+    display: block;
+    height: 0px;
+    clear: both;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.icon {
+    display: inline-block;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+.fa {
+    color: #999;
+    padding-right: 8px;
+    -webkit-transition: color .5s ease-in;
+    transition: color .5s ease-in;
+}
+
+.fa:hover {
+    color: #119ef5;
+}
+
+.view {
+    font-size: 14px;
+    color: #999;
+}
+
+.copyright {
+    display: inline-block;
+    float: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    margin-right: 1%;
+    font-size: 14px;
+    color: #999;
 }
