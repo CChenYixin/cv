@@ -105,22 +105,40 @@ main {
     font-family: NSimSun;
     color: #000;
     margin-bottom: 80px;
+    cursor: pointer;
 }
 
 .small-font {
     display: block;
     color: #999;
-    font-family: FangSong;
+    font-family: Microsoft YaHei;
+    font-weight: 300;
     font-size: 16px;
     margin-top: 5px;
 }
 
 .contact-content {
-    font-size: 16px;
-    font-family: FangSong;
-    font-weight: normal;
+    font-size: 14px;
+    font-family: Songti SC;
+    font-weight: 300;
     line-height: 15px;
-    color: #000;
+    color: #999;
+}
+
+.title-content::after {
+    float: left;
+    content: "";
+    margin-top: 5px;
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #999;
+    transition: width .5s ease-in-out;
+}
+
+.title-content:hover::after {
+    background-color: #119ef5;
+    width: 60%;
 }
 
 .img-content {
