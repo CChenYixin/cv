@@ -77,13 +77,13 @@ main {
     padding-top: 100px;
 }
 
-.intro-content {
+.container {
     width: 100%;
     max-width: 1600px;
     margin: 0 0 0 auto;
 }
 
-.intro-content::after {
+.container::after {
     content: "";
     display: block;
     height: 0px;
@@ -113,7 +113,9 @@ main {
     color: #999;
     font-family: Microsoft YaHei;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
+    word-spacing: 7px;
+    letter-spacing: 2px;
     margin-top: 5px;
 }
 
@@ -133,6 +135,7 @@ main {
     height: 2px;
     width: 0;
     background-color: #999;
+    -webkit-transition: width .5s ease-in-out;
     transition: width .5s ease-in-out;
 }
 
@@ -142,16 +145,26 @@ main {
 }
 
 .img-content {
+    position: relative;
     float: right;
+    width: 400px;
+    height: 260px;
     box-sizing: border-box;
+    overflow: hidden;
     text-align: right;
-    width: 25%;
+    border-radius: 5px 0 0 5px;
 }
 
-.img-content-01 {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px 0 0 5px;
+.imgs-list {
+    position: absolute;
+    width: 2000px;
+    height: 260px;
+}
+
+.imgs {
+    float: left;
+    width: 400px;
+    height: 260px;
 }
 
 
@@ -272,4 +285,7 @@ footer::after {
     margin-right: 1%;
     font-size: 14px;
     color: #999;
+}
+
+
 }
