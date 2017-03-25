@@ -1,5 +1,6 @@
 ;(function(){
     var list = document.getElementById('list');
+    var timer = null;
 
 
 function animate(offset){
@@ -9,50 +10,35 @@ function animate(offset){
     var speed = offset/(time/interval);//每次位移量
 
     function go(){
-        if ( (speed <0 && parseInt(list.style.left) > newLeft)||(speed>0 &&parseInt(list.style.left) < newLeft) ){
+
+        if ( (speed < 0 && parseInt(list.style.left) > newLeft)||(speed >0 &&parseInt(list.style.left) < newLeft) ){
             list.style.left = parseInt(list.style.left) + speed +'px';
             setTimeout(go,interval);
 
         }else{
             list.style.left = newLeft +'px';
-            // if(newLeft > -400 ){
-            //         list.style.left = -1600+ 'px';
-            // }
+            if(newLeft > -400 ){
+                    list.style.left = -1600+ 'px';
+            }
             if(newLeft <-1200){
                     list.style.left = -400+ 'px';
             }
         }
     }
     go();
+
 }
 
-var timer;
 function play() {
-    clearInterval(timer);
+ if ( timer ) {
+     clearInterval ( timer );
+     timer = null;
+ }
     timer = setInterval(function () {
         animate(-400);
-    }, 10000);
+    }, 5000);
 }
-
 play();
 
 
-
-
 })();
-
-/*if ( (speed <0 && parseInt(list.style.left) > newLeft)||(speed>0 &&parseInt(list.style.left) < newLeft) ){
-    list.style.left = parseInt(list.style.left)+speed+'px';
-    setInterval(go,interval);
-}else{
-    animated=false;
-    list.style.left = newLeft +'px';
-    if(newLeft >-400){
-            list.style.left = -2000+ 'px';
-    }
-        if(newLeft <-2000){
-            list.style.left = -400+ 'px';
-    }
-}
-go();
-}*/
