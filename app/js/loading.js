@@ -6,6 +6,13 @@ $(document).ready(
 );
 
 
+window.onload = function(){
+    NProgress.done();
+};
+
+/**
+*API已弃用
 $(window).load(
     NProgress.done()
 );
+*/
