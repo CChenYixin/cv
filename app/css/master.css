@@ -292,7 +292,7 @@ footer::after {
 
 .float {
     position: absolute;
-    display: block;
+    display: none;
     top: 0;
     left: 0;
     width: 100%;
@@ -335,6 +335,7 @@ footer::after {
     opacity: 0;
     cursor: pointer;
     border-top: 2px solid #fff;
+    -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
 
@@ -344,6 +345,7 @@ footer::after {
 
 .nav-li:hover {
     border-top: 2px solid #119ef5;
+    -webkit-transform: scale(0.9);
     transform: scale(0.9);
 }
 
@@ -351,4 +353,22 @@ footer::after {
     max-width: 100%;
     height: auto;
     opacity: .7;
+}
+
+
+/*微信公众号浮层*/
+
+.weixin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*border: 1px solid #333;*/
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: .3s ease-in-out;
+}
+
+.weixin:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
